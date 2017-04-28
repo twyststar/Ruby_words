@@ -10,7 +10,7 @@ _This is a multi-page Ruby app that allows users to add words and add definition
 
 ## Setup/Installation Requirements
 
-* _view on heroku at _
+* _view on heroku at https://lit-atoll-98299.herokuapp.com/_
 * _or_
 * _clone this repository to desktop_
 * _install Sinatra gem_
