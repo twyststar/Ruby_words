@@ -7,6 +7,8 @@ require('./lib/definition')
 also_reload('./**/*.rb')
 
 get('/') do
+  Word.clear()
+  Definition.clear()
   erb(:index)
 end
 
