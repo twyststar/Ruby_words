@@ -1,3 +1,17 @@
-<h1><%= @word.name %></h1>
-<p><%= @definition.definition %></p>
-<a href="/words_home"></a>
+
+<div class="col-sm-8">
+  <h1><%= @word.name %></h1>
+  <h3>"<%= @definition.definition %>"</h3>
+  <img src="" alt="">
+</div>
+<div class="col-sm-4">
+  <h4>More definitions for <%= @word.name %></h4>
+  <ul>
+    <% @word.definitions.each() do |definition|
+      if definition.id != @definition.id %>
+    <li><a href="/single_definition/<%= definition.id%>"> <%= definition.definition%></a></li>
+    <% end %>
+    <% end %>
+  </ul>
+</div>
+<a href="/words_home">Back to word list</a>

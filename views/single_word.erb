@@ -1,3 +1,12 @@
+
+<div class="col-md-6">
+  <h1><%= @word.name %></h1>
+  <ul>
+    <% @word.definitions.each() do |definition| %>
+    <li><a href="/single_definition/<%= definition.id%>"> <%= definition.definition%></a></li>
+    <% end %>
+  </ul>
+</div>
 <div class="col-md-6">
   <form action="/add_definition" method="post">
     <h3>Add a new definition for this word:</h3>
@@ -10,15 +19,6 @@
   </form>
 
 </div>
-<div class="col-md-6">
-  <h1><%= @word.name %></h1>
-  <ul>
-    <% @word.definitions.each() do |definition| %>
-    <li><a href="/single_definition/<%= definition.id/@word.id%>"> <%= definition.definition%></a></li>
-    <% end %>
-  </ul>
-</div>
-
 
 
 
