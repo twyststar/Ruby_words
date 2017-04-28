@@ -1,10 +1,10 @@
 
-<div class="col-sm-8">
+<div class="col-sm-8 well">
   <h1><%= @word.name %></h1>
   <h3>"<%= @definition.definition %>"</h3>
   <img src="" alt="">
 </div>
-<div class="col-sm-4">
+<div class="col-sm-4 well">
   <h4>More definitions for <%= @word.name %></h4>
   <ul>
     <% @word.definitions.each() do |definition|
@@ -13,5 +13,5 @@
     <% end %>
     <% end %>
   </ul>
+  <button class="btn"><a href="/words_home">Back to word list</a></button>
 </div>
-<a href="/words_home">Back to word list</a>
