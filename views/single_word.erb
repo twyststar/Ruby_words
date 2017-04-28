@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <form action="/single_contact" method="post">
+    <h3>Add a new definition for this word:</h3>
+    <div class="form-group">
+      <input id='word_id' name='word_id' type='hidden' value='<%= @word.id() %>'>
+      <label for="definition">Definition:</label>
+      <input class="form-control" type="text" name="definition" id="definition">
+    </div>
+    <button type="submit" name="button">Add</button>
+  </form>
+
+</div>
+<div class="col-md-6">
+  <h1><%= @word %></h1>
+  <ul>
+    <% @word.definitions.each() do |one_definition| %>
+    <li><a href="/single_definition/<%= one_definition.id%>"> <%= one_definition.definition%></a></li>
+    <% end %>
+  </ul>
+</div>
+
+
+
+
+
+<a href="/">Home</a>

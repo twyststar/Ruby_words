@@ -1,0 +1,19 @@
+<div class="col-md-6">
+  <form action="/word_add" method="post">
+
+    <div class="form-group">
+      <label for="word_input">Enter a new word!</label>
+      <input class="form-control" type="text" name="word_input" id="word_input">
+    </div>
+    <button type="submit" name="button">Add Word</button>
+  </form>
+
+</div>
+<div class="col-md-6">
+  <h4>Your words:</h4>
+  <ul>
+    <% @words.each() do |one_word| %>
+    <li><a href="/single_word/<%= one_word.id%>"> <%= one_word%></a></li>
+    <% end %>
+  </ul>
+</div>
