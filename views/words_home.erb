@@ -13,7 +13,7 @@
   <h4>Your words:</h4>
   <ul>
     <% @words.each() do |one_word| %>
-    <li><a href="/single_word/<%= one_word.id%>"> <%= one_word%></a></li>
+    <li><a href="/single_word/<%= one_word.id%>"> <%= one_word.name%></a></li>
     <% end %>
   </ul>
 </div>

@@ -1,13 +1,14 @@
 class Definition
-  attr_reader(:definition, :id)
+  attr_reader(:definition, :id, :word_id)
   @@definitions = []
 
   define_method(:initialize) do |attributes|
     @definition = attributes.fetch(:definition)
     @id = @@definitions.length() + 1
+    @word_id = attributes.fetch(:word_id)
   end
 
-  define_singleton_method(:save) do
+  define_method(:save) do
     @@definitions.push(self)
   end
 
